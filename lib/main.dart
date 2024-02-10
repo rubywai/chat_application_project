@@ -1,4 +1,5 @@
-import 'package:chat_application_tuto/core/theme.dart';
+import 'package:chat_application_tuto/features/splash/ui/screen/splash_screen.dart';
+import 'package:chat_application_tuto/features/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: lightTheme(),
+      themeMode: ThemeMode.light,
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      home: const HomePage(),
     );
   }
 }
@@ -22,7 +26,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const SplashScreen();
   }
 }
 
