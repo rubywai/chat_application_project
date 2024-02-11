@@ -1,3 +1,7 @@
+import 'package:chat_application_tuto/common/const/routes.dart';
+import 'package:chat_application_tuto/features/auth/otpconfirm/ui/screen/otp_confirm_screen.dart';
+import 'package:chat_application_tuto/features/auth/signup/ui/screen/sign_up_screen.dart';
+import 'package:chat_application_tuto/features/profile/ui/screen/profile_screen.dart';
 import 'package:chat_application_tuto/features/splash/ui/screen/splash_screen.dart';
 import 'package:chat_application_tuto/features/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +21,11 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: lightTheme,
       darkTheme: darkTheme,
+      routes: {
+        Routes.signUp : (_) => const SignUpScreen(),
+        Routes.optConfirm : (_) => const OTPConfirmScreen(),
+        Routes.profile : (_) => const ProfileScreen(),
+      },
       home: const HomePage(),
     );
   }

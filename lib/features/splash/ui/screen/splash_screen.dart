@@ -1,3 +1,4 @@
+import 'package:chat_application_tuto/common/const/routes.dart';
 import 'package:chat_application_tuto/common/widget/action_button.dart';
 import 'package:chat_application_tuto/features/theme/surface_color.dart';
 import 'package:chat_application_tuto/features/theme/text_extension.dart';
@@ -47,23 +48,25 @@ class _SplashScreenState extends State<SplashScreen> {
                         ?.copyWith(color: colorScheme.onSurface),
                   ),
                 ),
-               Column(
-                 children: [
-                   Text(
-                     'Terms & Privacy Policy',
-                     style: theme.textTheme.bodyLarge?.copyWith(
-                       color: colorScheme.onSurface,
-                     ),
-                   ),
-                   const SizedBox(height: 40,),
-                   ActionButton(
-                     text: 'Start Messaging',
-                     onPressed: () {
-
-                     },
-                   ),
-                 ],
-               )
+                Column(
+                  children: [
+                    Text(
+                      'Terms & Privacy Policy',
+                      style: theme.textTheme.bodyLarge?.copyWith(
+                        color: colorScheme.onSurface,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    ActionButton(
+                      text: 'Start Messaging',
+                      onPressed: () {
+                        Navigator.pushNamed(context, Routes.signUp);
+                      },
+                    ),
+                  ],
+                )
               ],
             ))
           ],

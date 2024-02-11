@@ -17,7 +17,7 @@ class ActionButton extends StatelessWidget {
     return FilledButton(
       style: FilledButton.styleFrom(
         backgroundColor: brandColor.brandDefault,
-        foregroundColor: Theme.of(context).colorScheme.surface,
+        foregroundColor: brandColor.buttonText,
         minimumSize: const Size(327, 52),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(30)),
